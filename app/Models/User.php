@@ -42,8 +42,7 @@ class User extends Authenticatable
     ];
 
     // Relación muchos usuarios a muchas publicaciones.
-
-    public function usersPublications()
+    public function publications()
     {
         return $this->belongsToMany(Publication::class);
     }

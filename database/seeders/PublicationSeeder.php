@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
+use App\Models\Publication;
 class PublicationSeeder extends Seeder
 {
     /**
@@ -13,6 +13,32 @@ class PublicationSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Publication::create([
+            'name' => 'prof de musica',
+            'state' => true,
+            'turn' => 'tarde',
+            'establishment_id' => 1,
+        ]);
+
+        Publication::create([
+            'name' => 'prof de musica',
+            'state' => true,
+            'turn' => 'tarde',
+            'establishment_id' => 1,
+        ]);
+
+        Publication::create([
+            'name' => 'prof de musica',
+            'state' => true,
+            'turn' => 'tarde',
+            'establishment_id' => 2,
+        ]);
+
+        Publication::create([
+            'name' => 'prof de musica',
+            'state' => true,
+            'turn' => 'tarde',
+            'establishment_id' => 3,
+        ]);
     }
 }

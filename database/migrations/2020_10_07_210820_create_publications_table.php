@@ -18,12 +18,13 @@ class CreatePublicationsTable extends Migration
 
             $table->string('name');
             $table->boolean('state');
-            $table->string('tags')->nullable();
+            // $table->string('tags')->nullable();
             $table->string('character')->nullable();
             $table->string('turn');
             $table->integer('hours')->nullable();
-            $table->date('date');
+            $table->date('date')->nullable();
             $table->string('observation')->nullable();
+
             $table->foreignId('establishment_id');
 
             $table->timestamps();

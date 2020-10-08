@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\GuestController::class, 'index']);
 
+Route::get('/{publication}', [App\Http\Controllers\GuestController::class, 'attach']);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

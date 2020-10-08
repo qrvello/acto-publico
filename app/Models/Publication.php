@@ -26,10 +26,9 @@ class Publication extends Model
         return $this->belongsTo(Establishment::class);
     }
 
-
     // Relación muchas publicaciones a muchos usuarios.
-
-    public function publicationsUsers(){
+    public function users()
+    {
         return $this->belongsToMany(User::class);
     }
 }
