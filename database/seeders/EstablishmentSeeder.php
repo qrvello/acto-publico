@@ -15,18 +15,18 @@ class EstablishmentSeeder extends Seeder
     public function run()
     {
         Establishment::create([
-            'name' => 'chacabuco',
-            'adress' => 'rivadavia 17747',
+            'name' => 'Chacabuco',
+            'adress' => 'Rivadavia 17747',
         ]);
 
         Establishment::create([
-            'name' => 'japon',
-            'adress' => 'arieta 1231',
+            'name' => 'Japón',
+            'adress' => 'Arieta 1231',
         ]);
 
         Establishment::create([
-            'name' => 'islas malvinas',
-            'adress' => 'arieta 12312312',
+            'name' => 'Islas Malvinas',
+            'adress' => 'Jujuy 23423',
         ]);
     }
 }

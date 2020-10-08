@@ -14,31 +14,137 @@ class PublicationSeeder extends Seeder
     public function run()
     {
         Publication::create([
-            'name' => 'prof de musica',
+            'name' => 'PROFESOR DE NIVEL MEDIO',
             'state' => true,
-            'turn' => 'tarde',
+            'character' => 'Suplente',
+            'turn' => 'Varios',
             'establishment_id' => 1,
+            'hours' => 4,
+            'date' => date("Y-m-d H:i:s"),
+            'observation' => 'Ciclo básico 1º 13'
+
         ]);
 
         Publication::create([
-            'name' => 'prof de musica',
-            'state' => true,
-            'turn' => 'tarde',
-            'establishment_id' => 1,
-        ]);
-
-        Publication::create([
-            'name' => 'prof de musica',
-            'state' => true,
-            'turn' => 'tarde',
+            'name' => 'PROFESOR DE NIVEL MEDIO',
+            'state' => false,
+            'character' => 'Titular',
+            'turn' => 'Mañana',
             'establishment_id' => 2,
-        ]);
+            'hours' => 4,
+            'date' => date("Y-m-d H:i:s"),
+            'observation' => 'Ciclo básico 1º 13'
 
+        ]);
         Publication::create([
-            'name' => 'prof de musica',
+            'name' => 'PROFESOR DE NIVEL MEDIO',
             'state' => true,
-            'turn' => 'tarde',
+            'character' => 'Suplente',
+            'turn' => 'Varios',
+            'establishment_id' => 1,
+            'hours' => 4,
+            'date' => date("Y-m-d H:i:s"),
+            'observation' => 'Ciclo básico 1º 13'
+
+        ]);
+        Publication::create([
+            'name' => 'PROFESOR DE NIVEL MEDIO',
+            'state' => true,
+            'character' => 'Suplente',
+            'turn' => 'Varios',
             'establishment_id' => 3,
+            'hours' => 4,
+            'date' => date("Y-m-d H:i:s"),
+            'observation' => 'Ciclo básico 1º 13'
+
+        ]);
+        Publication::create([
+            'name' => 'PROFESOR DE NIVEL MEDIO',
+            'state' => true,
+            'character' => 'Suplente',
+            'turn' => 'Varios',
+            'establishment_id' => 3,
+            'hours' => 4,
+            'date' => date("Y-m-d H:i:s"),
+            'observation' => 'Ciclo básico 1º 13'
+
+        ]);
+        Publication::create([
+            'name' => 'PROFESOR DE NIVEL MEDIO',
+            'state' => true,
+            'character' => 'Suplente',
+            'turn' => 'Varios',
+            'establishment_id' => 2,
+            'hours' => 4,
+            'date' => date("Y-m-d H:i:s"),
+            'observation' => 'Ciclo básico 1º 13'
+
+        ]);
+        Publication::create([
+            'name' => 'PROFESOR DE NIVEL MEDIO',
+            'state' => true,
+            'character' => 'Suplente',
+            'turn' => 'Varios',
+            'establishment_id' => 1,
+            'hours' => 4,
+            'date' => date("Y-m-d H:i:s"),
+            'observation' => 'Ciclo básico 1º 13'
+
+        ]);
+        Publication::create([
+            'name' => 'PROFESOR DE NIVEL MEDIO',
+            'state' => true,
+            'character' => 'Suplente',
+            'turn' => 'Varios',
+            'establishment_id' => 2,
+            'hours' => 4,
+            'date' => date("Y-m-d H:i:s"),
+            'observation' => 'Ciclo básico 1º 13'
+
+        ]);
+        Publication::create([
+            'name' => 'PROFESOR DE NIVEL MEDIO',
+            'state' => true,
+            'character' => 'Suplente',
+            'turn' => 'Varios',
+            'establishment_id' => 3,
+            'hours' => 4,
+            'date' => date("Y-m-d H:i:s"),
+            'observation' => 'Ciclo básico 1º 13'
+
+        ]);
+        Publication::create([
+            'name' => 'PROFESOR DE NIVEL MEDIO',
+            'state' => true,
+            'character' => 'Suplente',
+            'turn' => 'Varios',
+            'establishment_id' => 1,
+            'hours' => 4,
+            'date' => date("Y-m-d H:i:s"),
+            'observation' => 'Ciclo básico 1º 13'
+
+        ]);
+        Publication::create([
+            'name' => 'PROFESOR DE NIVEL MEDIO',
+            'state' => true,
+            'character' => 'Suplente',
+            'turn' => 'Varios',
+            'establishment_id' => 3,
+            'hours' => 4,
+            'date' => date("Y-m-d H:i:s"),
+            'observation' => 'Ciclo básico 1º 13'
+
+        ]);
+        Publication::create([
+            'name' => 'PROFESOR DE NIVEL MEDIO',
+            'state' => true,
+            'character' => 'Suplente',
+            'turn' => 'Varios',
+            'establishment_id' => 1,
+            'hours' => 4,
+            'date' => date("Y-m-d H:i:s"),
+            'observation' => 'Ciclo básico 1º 13'
+
         ]);
     }
 }
