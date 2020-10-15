@@ -1,4 +1,4 @@
-<div class="card h-100">
+<div class="card h-100 shadow">
     <div class="card-body">
         <h4 class="card-title">{{ $publication->name }}</h4>
         <p class="card-text">
@@ -36,13 +36,13 @@
             Observación: {{$publication->observation}}
         </p>
         <div class="row text-center">
-            <div class="col-md-6">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal{{$publication->id}}">
-                Ver detalle
-            </button>
+            <div class="col-md-6 mb-4">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal{{$publication->id}}">
+                    Ver detalle
+                </button>
             </div>
             <div class="col-md-6">
-            {{ $button ?? ''}}
+                {{ $button ?? ''}}
             </div>
         </div>
 
