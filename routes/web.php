@@ -15,7 +15,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\GuestController::class, 'index']);
 
-Route::get('/usuario', [App\Http\Controllers\UserController::class, 'profile']);
+Route::middleware('auth')->group(function () {
+    Route::get('/usuario', [App\Http\Controllers\User\ProfileController::class, 'profile']);
+    Route::get('/mis-participaciones', [App\Http\Controllers\User\ParticipationController::class, 'participations']);
+
+    Route::post('/participacion/{publication_id}/postularse', [App\Http\Controllers\User\ParticipationController::class, 'store_participation']);
+    Route::delete('/participacion/{publication_id}/desistir', [App\Http\Controllers\User\ParticipationController::class, 'destroy_participation']);
+});
 
 Auth::routes();
 

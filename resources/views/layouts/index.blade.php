@@ -17,6 +17,7 @@
     <link rel="shortcut icon" type="image/jpg" href="{{ asset('favicon.jpg') }}" />
 
     <!-- Custom styles for this template -->
+    <link href="{{ asset('css/app.css')}}" rel="stylesheet">
     <link href="{{ asset('css/heroic-features.css')}}" rel="stylesheet">
 
 </head>
@@ -26,31 +27,16 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Acto Público</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="{{url('/')}}">Acto Público</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <!-- <li class="nav-item active">
-				<a class="nav-link" href="#">Home
-				<span class="sr-only">(current)</span>
-				</a>
-			</li> -->
                     <li>
-                        <a class="nav-link" href="#">
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house" fill="currentColor"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
-                                <path fill-rule="evenodd"
-                                    d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link padding-right" href="#">
+                        <a class="nav-link padding-right" href="{{url('/')}}">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star" fill="currentColor"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
@@ -59,22 +45,10 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" data-toggle="collapse" href="#map" role="button" aria-expanded="false"
-                            aria-controls="collapseExample">
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-filter" fill="currentColor"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" data-toggle="collapse" href="#search" role="button" aria-expanded="false"
-                            aria-controls="collapseExample">
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-geo-alt-fill"
-                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                        <a class="nav-link" href="">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-calendar-event" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                                <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
                             </svg>
                         </a>
                     </li>
@@ -87,45 +61,42 @@
                             </svg>
                         </a>
                     </li>
+                        @if (Route::has('login'))
+                            @auth
+                            <li>
+                                <div class="dropdown">
+                                    <a href="#dropdown" class="nav-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ $user->name}} {{$user->lastname}} </a>
 
+                                    <div id="dropdown" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <div id="dropdown" class="dropdown-item">
+                                            <a href="{{url('/usuario')}}">Perfil</a>
+                                        </div>
+                                        <div id="dropdown" class="dropdown-item">
+                                            <a href="{{url('/mis-participaciones')}}">Mis participaciones</a>
+                                        </div>
+                                        <div id="dropdown" class="dropdown-item">
+                                            <a class="" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Cerrar Sesión</a>
+                                        </div>
 
-                    @if (Route::has('login'))
-                    @auth
-                    <li>
-                        <a class="nav-link" href="{{ url('usuario') }}">
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle"
-                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
-                                <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                <path fill-rule="evenodd"
-                                    d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
-                            {{ __('Cerrar sesión') }}
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </li>
-                    @else
-                    <li>
-                        <a class="nav-link" href="{{ url('/login') }}">
-                            Iniciar sesión
-                        </a>
-                    </li>
-
-                    @endif
+                                    </div>
+                                </div>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </li>
+                        @else
+                        <li>
+                            <a class="nav-link" href="{{ url('/login') }}">
+                                Iniciar sesión
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="{{ route('register') }}">Registrame</a>
+                        </li>
+                        @endif
+                        @endif
+                </ul>
             </div>
-            @endif
-            </li>
-            </ul>
-        </div>
         </div>
     </nav>
 

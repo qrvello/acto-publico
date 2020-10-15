@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);
 
 /*!
  * Bootstrap v4.5.2 (https://getbootstrap.com/)
@@ -4939,7 +4939,7 @@ input[type=button].btn-block {
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  border-radius: 2rem;
 }
 
 .card > hr {
@@ -5004,7 +5004,7 @@ input[type=button].btn-block {
 }
 
 .card-header:first-child {
-  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+  border-radius: calc(2rem) calc(2rem) 0 0;
 }
 
 .card-footer {
@@ -5498,8 +5498,8 @@ a.badge-dark.focus {
   position: relative;
   padding: 0.75rem 1.25rem;
   margin-bottom: 1rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
+  border: 1px hidden transparent;
+  border-radius: 2rem;
 }
 
 .alert-heading {
@@ -10898,4 +10898,3 @@ a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-
