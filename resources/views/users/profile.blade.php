@@ -8,6 +8,9 @@
         <div class="text-center">
             <h2 class="section-heading text-uppercase">Bienvenido al acto publico de  Móron</h2>
             <h3 class="section-subheading"><em>{{$user->name}}</em></h3>
+            @if(@auth::user()->hasPermissionTo('admin'))
+                <h3 class="section-subheading" >Eres un admin</h3>
+            @endif
         </div>
         <div class="row text-center">
             <div class="col-md-6">

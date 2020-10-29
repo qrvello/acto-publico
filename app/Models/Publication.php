@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Models;
+    namespace   App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+        use Illuminate\Database\Eloquent\Factories\HasFactory;
+        use Illuminate\Database\Eloquent\Model;
 
-class Publication extends Model
-{
-    use HasFactory;
+        class Publication extends Model
+        {
+            use HasFactory;
 
     protected $fillable = [
         'name',
@@ -16,7 +16,8 @@ class Publication extends Model
         'turn',
         'hours',
         'date',
-        'observation'
+        'observation',
+        'establishment_id'
     ];
 
     // Relación: una publicación tiene un establecimiento.

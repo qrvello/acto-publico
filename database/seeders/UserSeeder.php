@@ -16,25 +16,30 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
+        //Se crea el usuario
+        $user = User::create([
             'name' => 'Santiago',
             'lastname' => 'Curvello',
             'email' => 'admin',
             'password' => bcrypt('admin')
         ]);
-
-        User::create([
-            'name' => 'admin2',
-            'lastname' => 'admin',
+        
+        //Se le asigna el rol admin al usuario y sus permisos
+        $user->assignRole('admin');
+        $user->givePermissionTo('admin');
+        
+        //Se crea el usuario
+        $user = User::create([
+            'name' => 'Luciano',
+            'lastname' => 'Ferreiros',
             'email' => 'admin2',
-            'password' => bcrypt('admin')
+            'password' => bcrypt('admin2')
         ]);
+        
+        //Se le asigna el rol admin al usuario y sus permisos
+        $user->assignRole('admin');
+        $user->givePermissionTo('admin');
 
-        User::create([
-            'name' => 'admin3',
-            'lastname' => 'admin',
-            'email' => 'admin3',
-            'password' => bcrypt('admin')
-        ]);
+        return $user;
     }
 }

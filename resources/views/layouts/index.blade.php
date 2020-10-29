@@ -63,28 +63,33 @@
                     </li> --}} -->
                         @if (Route::has('login'))
                             @auth
-                            <li>
-                                <div class="dropdown">
-                                    <a href="#dropdown" class="nav-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ $user->name}} {{$user->lastname}} </a>
+                                <li>
+                                    <div class="dropdown">
+                                        <a href="#dropdown" class="nav-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ $user->name}} {{$user->lastname}} </a>
 
-                                    <div id="dropdown" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <div id="dropdown" class="dropdown-item">
-                                            <a href="{{url('/usuario')}}">Perfil</a>
-                                        </div>
-                                        <div id="dropdown" class="dropdown-item">
-                                            <a href="{{url('/mis-participaciones')}}">Mis participaciones</a>
-                                        </div>
-                                        <div id="dropdown" class="dropdown-item">
-                                            <a class="" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Cerrar Sesión</a>
-                                        </div>
+                                        <div id="dropdown" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            @if(@Auth::user()->hasPermissionTo('admin'))
+                                                <div id="dropdown" class="dropdown-item">
+                                                    <a href="{{url('/admin')}}">Panel</a>
+                                                </div>
+                                            @endif
+                                            <div id="dropdown" class="dropdown-item">
+                                                <a href="{{url('/usuario')}}">Perfil</a>
+                                            </div>
+                                            <div id="dropdown" class="dropdown-item">
+                                                <a href="{{url('/mis-participaciones')}}">Mis participaciones</a>
+                                            </div>
+                                            <div id="dropdown" class="dropdown-item">
+                                                <a class="" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Cerrar Sesión</a>
+                                            </div>
 
+                                        </div>
                                     </div>
-                                </div>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </li>
-                        @else
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </li>
+                            @else
                         <li>
                             <a class="nav-link" href="{{ url('/login') }}">
                                 Iniciar sesión
