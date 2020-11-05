@@ -51,9 +51,13 @@
                                 <textarea class="form-control" name="observation" rows="3"></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="turn">turn</label>
+                                <label for="turn">Turno</label>
                                 <input type="text" class="form-control" value=" " name="turn" placeholder="">
                             </div>
+                            <div class="form-group col-md-6">
+                                    <label for="matter">Materia</label>
+                                    <input type="text" class="form-control" value=" " name="matter" placeholder="">
+                                </div>
                             <div class="form-group">
                                 <label for="hours">Horas</label>
                                 <input type="text" class="form-control" value=" " name="hours" placeholder="">

@@ -74,6 +74,7 @@ class RegisterController extends Controller
 
         // Le asignamos el rol de usuario
         $user->assignRole('user');
+        $user->givePermissionTo('user');
 
         return $user;
     }

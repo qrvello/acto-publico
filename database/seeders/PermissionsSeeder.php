@@ -17,5 +17,7 @@ class PermissionsSeeder extends Seeder
 
         //Creamos el permiso para administradores
         Permission::create(['name' => 'admin']);
+
+        Permission::create(['name' => 'user']);
     }
 }

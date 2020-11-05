@@ -62,6 +62,10 @@
                                     <input type="text" class="form-control" value="{{ $publication->turn }} " name="turn" placeholder="">
                                 </div>
                                 <div class="form-group col-md-6">
+                                    <label for="matter">Materia</label>
+                                    <input type="text" class="form-control" value="{{ $publication->matter }} " name="matter" placeholder="">
+                                </div>
+                                <div class="form-group col-md-6">
                                     <label for="hours">Horas de cátedra</label>
                                     <input type="text" class="form-control" value="{{ $publication->hours }} " name="hours" placeholder="">
                                 </div>

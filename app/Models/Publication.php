@@ -15,6 +15,7 @@
         'character',
         'turn',
         'hours',
+        'matter',
         'date',
         'observation',
         'establishment_id'

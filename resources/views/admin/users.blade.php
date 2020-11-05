@@ -89,7 +89,7 @@
                                             </tr>
                                         @endforeach
                                     @else
-                                        <div class="alert alert-warning">Aún no hay categorías creadas.</div>
+                                        <div class="alert alert-warning">Aún no hay usuarios registrados.</div>
                                     @endif
                                 </tbody>
                             </table>

@@ -12,6 +12,9 @@
             <i class="fas fa-clock fa-fw"></i>
             Turno: {{$publication->turn}}</p>
         <p class="card-text">
+            <i class="fas fa-clock fa-fw"></i>
+            Materia: {{$publication->matter}}</p>
+        <p class="card-text">
             <i class="fas fa-place-of-worship fa-fw"></i>
             Establecimiento del Cargo: {{$publication->establishment->name}}
         </p>

@@ -21,6 +21,7 @@ class CreatePublicationsTable extends Migration
             // $table->string('tags')->nullable();
             $table->string('character')->nullable();
             $table->string('turn');
+            $table->string('matter');
             $table->integer('hours')->nullable();
             $table->date('date')->nullable();
             $table->string('observation')->nullable();

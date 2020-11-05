@@ -54,6 +54,7 @@
                                         <th>Horas de cátedra</th>
                                         <th>Fecha del acto público</th>
                                         <th>Estado</th>
+                                        <th>Materia</th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -68,18 +69,19 @@
                                                 <td>{{ $publication->hours }}</td>
                                                 <td>{{ $publication->date }}</td>
                                                 <td>{{ $publication->state }}</td>
+                                                <td>{{ $publication->matter }}</td>
                                                 <td class="admin-button">
-                                                    <form action="{{ url('admin/publicacion/borrar/'. $publication->id) }}" method="POST">
+                                                    <form action="{{ url('/admin/publicacion/borrar/'. $publication->id) }}" method="POST">
                                                         {{ csrf_field() }}
                                                         {{ method_field('DELETE') }}
                                                         <button type="button" class="btn" data-toggle="modal" data-target="#confirmacionBorrar{{$publication->id}}">
                                                             <i class="fas fa-trash"></i>
                                                         </button>
                                                         <!-- Modal -->
-                                                        {{-- <x-alert-confirm-delete :id="$publication->id">
+                                                        <x-alert-confirm-delete :id="$publication->id">
                                                             <x-slot name="title">Borrar contenido</x-slot>
                                                             <x-slot name="message">¿Desea borrar la publicacion?</x-slot>
-                                                        </x-alert-confirm-delete> --}}
+                                                        </x-alert-confirm-delete>
                                                         {{-- // TODO arreglar alerta --}}
                                                     </form>
 
