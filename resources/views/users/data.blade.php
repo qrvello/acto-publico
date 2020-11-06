@@ -6,14 +6,16 @@
 
 <div class="card mb-3" style="max-width: 70%;">
     <div class="row no-gutters">
-        <div class="col-md-4">
-            <img src="http://placehold.it" alt="" class="img-rounded img-responsive" />
-        </div>
         <div class="col-md-8">
             <div class="card-body">
             <h4 class="card-title">{{$user->name}} {{$user->lastname}}</h4>
                 <p class="card-text"><cite class="text-muted">{{$user->location}}</cite></p>
-                <p class="card-text">Correo electronico: {{$user->email}}</p>
+                <p class="card-text">Correo electronico: 
+                @if($user->email)
+                    {{$user->email}}
+                    @else
+                        ...
+                    @endif </p>
                 <p class="card-text">Fecha de nacimiento: 
                     @if($user->birthdate)
                         {{$user->birthdate}}
@@ -24,13 +26,6 @@
                 <p class="card-text">Edad: 
                     @if($user->age)
                         {{$user->age}}
-                    @else
-                        ...
-                    @endif
-                </p>
-                <p class="card-text">Fecha de nacimiento: 
-                    @if($user->birthdate)
-                        {{$user->birthdate}}
                     @else
                         ...
                     @endif
@@ -48,6 +43,7 @@
                                     <div class="modal-header">
                                         <h3 class="card-title">Mis datos</h3>
                                     </div>
+                                    
                                     <div class="modal-body">
                                         <div class="form-group">
                                             <label for="name">Nombre</label>
@@ -69,7 +65,6 @@
                                             <label for="location">Localidad</label>
                                             <input type="text" class="form-control" value="{{ $user -> location }}" name="location">
                                         </div>
-
                                     </div>
                                     <div class="modal-footer text-center">
                                         <div class="col-12">

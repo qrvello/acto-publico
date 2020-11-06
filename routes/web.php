@@ -22,7 +22,6 @@ Route::middleware('auth')->group(function () {
         Route::get('/usuario', [App\Http\Controllers\User\ProfileController::class, 'profile']);
         Route::get('/mis-participaciones', [App\Http\Controllers\User\ParticipationController::class, 'participations']);
         Route::get('/mis-datos', [App\Http\Controllers\User\ProfileController::class, 'data']);
-        Route::get('/mis-datos/editar/{user}', [App\Http\Controllers\User\ProfileController::class, 'edit']);
         Route::put('/mis-datos/editar/{user}', [App\Http\Controllers\User\ProfileController::class, 'update']);
         
         Route::post('/participacion/{publication_id}/postularse', [App\Http\Controllers\User\ParticipationController::class, 'store_participation']);

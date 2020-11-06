@@ -46,7 +46,7 @@ class ProfileController extends Controller
     {   
             $user = User::find(Auth::user()->id);
 
-            $user->update($request->except(['password','image', 'email']));
+            $user->update($request->except(['password','email']));
         
             return redirect('/mis-datos')->with('status', 'Cambios realizados correctamente.');
 

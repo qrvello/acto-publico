@@ -30,6 +30,7 @@ class PublicationController extends Controller
         $publication->state =$request->boolean('state');
         $publication->observation =$request->input('observation');
         $publication->character =$request->input('character');
+        $publication->matter =$request->input('matter');
         $publication->turn =$request->input('turn');
         $publication->hours =$request->input('hours');
         $publication->date =$request->input('date');
@@ -46,6 +47,7 @@ class PublicationController extends Controller
         $publication->observation =$request->input('observation');
         $publication->character =$request->input('character');
         $publication->turn =$request->input('turn');
+        $publication->matter =$request->input('matter');
         $publication->hours =$request->input('hours');
         $publication->date =$request->input('date');
         $publication->establishment_id =$request->input('establishiment_id');

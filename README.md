@@ -41,4 +41,5 @@ php artisan migrate --seed
 php artisan serve
 ~~~
 
-- Loguearse con user `admin` y password `admin`.
+- Loguearse con user `admin` y password `admin`. Al hacerlo tiene privilegios de administrador para poder ingresar al panel administrable.
+- Los demas usuarios que sean creados no tendran dicho acceso.

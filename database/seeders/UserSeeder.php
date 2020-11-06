@@ -21,6 +21,9 @@ class UserSeeder extends Seeder
             'name' => 'Santiago',
             'lastname' => 'Curvello',
             'email' => 'admin',
+            'location' => 'Morón',
+            'birthdate' => '2002-02-19',
+            'age' => '18',
             'password' => bcrypt('admin')
         ]);
         
@@ -33,6 +36,9 @@ class UserSeeder extends Seeder
             'name' => 'Luciano',
             'lastname' => 'Ferreiros',
             'email' => 'admin2',
+            'location' => 'San Justo',
+            'birthdate' => '2001-07-25',
+            'age' => '19',
             'password' => bcrypt('admin2')
         ]);
         
